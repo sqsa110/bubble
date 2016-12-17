@@ -4,10 +4,15 @@ dom结构 div > ul > li
 
 ###参数列表###
 obj   `轮播图盒子 默认是jq调用对象` *非必*
+
 speed `动画时间  默认是1000` *非必*
+
 heightAuto `自适应高度  默认是false` *非必*
+
 heightAuto `自适应高度  默认是false` *非必*
+
 bubbleOff  `冒泡开关  默认是false` *非必*
+
 bubbleOff  `滑动开关  默认是true` *非必*
 
 ###方法列表###
