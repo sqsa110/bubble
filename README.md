@@ -17,8 +17,11 @@ bubbleOff  `滑动开关  默认是true` *非必*
 
 ###方法列表###
 setIndex  `设置当前显示index`
+
 getIndex  `读取当前显示index标记`
+
 upIndex   `移动到上一页`
+
 nextIndex `移动到下一页`
 
 ###事件列表###
