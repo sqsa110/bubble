@@ -156,9 +156,7 @@
         this.obj.on('touchmove',function(event){
             if (that.touchClick){
                 that.touchMoveFn(event.originalEvent.changedTouches[0].clientX,event);
-                if (that.bubbleOff) {
-                    event.preventDefault();
-                }
+                event.preventDefault();
             }
         });
         return this;
