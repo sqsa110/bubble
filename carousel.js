@@ -17,6 +17,8 @@
             speed : 1000,       //动画时间
             heightAuto : false, //自适应高度
             bubbleOff : false,  //冒泡开关
+            moveWidth : 50,     //移动范围判断到下一页
+            moveAutoOff : false, //触屏移动开关
             touchOff : true     //滑动开关
         },opt);
         for (var i in opt) {
@@ -194,18 +196,22 @@
             this.moveRepeatOff = false;
             this.touchMoveRepeatEv(ev);
         }
+        
+        if (this.moveAutoOff) {
+            this.disX = x - this.startX;
+            this.$ul.css('left',this.ulL + this.disX + 'px');
+        }
+        
         this.touchMoveEv(ev);
-        this.disX = x - this.startX;
-        this.$ul.css('left',this.ulL + this.disX + 'px');
         return this;
     }
 
     //滑动结束函数
     Carousel.prototype.touchEndFn = function(x,ev){
         if (!this.moveOff) { return this; }
-        if (x - this.startX > 50) {
+        if (x - this.startX > this.moveWidth) {
             this.upIndex();
-        } else if(x - this.startX < -50) {
+        } else if(x - this.startX < 0 - this.moveWidth) {
             this.nextIndex();
         } else {
             this.move(this.getIndex());
