@@ -13,7 +13,11 @@ heightAuto `自适应高度  默认是false` *非必*
 
 bubbleOff  `冒泡开关  默认是false` *非必*
 
-bubbleOff  `滑动开关  默认是true` *非必*
+moveWidth : ` 触屏移动范围到下一页 默认是50px`  *非必*
+
+moveAutoOff : `触屏移动开关 默认是false,` *非必*
+
+touchOff  `滑动开关  默认是true` *非必*
 
 ###方法列表###
 setIndex  `设置当前显示index`
